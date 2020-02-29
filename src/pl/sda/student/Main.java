@@ -21,6 +21,15 @@ public class Main {
         Student student3 = new Student("Jan", "Nowak", 35);
         Student student4 = new Student("Karyna", "Jabol", 36);
         Student student5 = new Student("Sebastian", "Wisniewski", 37);
+
+        List<Student>studentList = new ArrayList<>();
+        studentList.add(student);
+        studentList.add(student1);
+        studentList.add(student2);
+        studentList.add(student3);
+        studentList.add(student4);
+        studentList.add(student5);
+
         try {
             objectMapper.writeValue(new File("student.json"), student);
             objectMapper.writeValue(new File("student1.json"), student1);
@@ -28,13 +37,13 @@ public class Main {
             objectMapper.writeValue(new File("student3.json"), student3);
             objectMapper.writeValue(new File("student4.json"), student4);
             objectMapper.writeValue(new File("student5.json"), student5);
+            objectMapper.writeValue(new File("studentArrayList.json"), studentList);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
 
-//        List<Student>studentList = new ArrayList<>();
-//        studentList.add(student);
+
+
 
     }
 }

@@ -30,19 +30,21 @@ public class Main {
         studentList.add(student4);
         studentList.add(student5);
 
-        try {
-            objectMapper.writeValue(new File("student.json"), student);
-            objectMapper.writeValue(new File("student1.json"), student1);
-            objectMapper.writeValue(new File("student2.json"), student2);
-            objectMapper.writeValue(new File("student3.json"), student3);
-            objectMapper.writeValue(new File("student4.json"), student4);
-            objectMapper.writeValue(new File("student5.json"), student5);
-            objectMapper.writeValue(new File("studentArrayList.json"), studentList);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            objectMapper.writeValue(new File("student.json"), student);
+//            objectMapper.writeValue(new File("student1.json"), student1);
+//            objectMapper.writeValue(new File("student2.json"), student2);
+//            objectMapper.writeValue(new File("student3.json"), student3);
+//            objectMapper.writeValue(new File("student4.json"), student4);
+//            objectMapper.writeValue(new File("student5.json"), student5);
+//            objectMapper.writeValue(new File("studentArrayList.json"), studentList);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
-
+        JSONUtils jsonUtils= new JSONUtils();
+        jsonUtils.writeList("ListaStudentow.json", studentList);
+        jsonUtils.readList("ListaStudentow.json");
 
 
     }

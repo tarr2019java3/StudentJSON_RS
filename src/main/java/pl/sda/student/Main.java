@@ -11,8 +11,6 @@ public class Main {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-
-
         Student student1 = new Student("John", "Doe", 33);
         Student student2 = new Student("Jane", "Doe", 34);
         Student student3 = new Student("Jan", "Nowak", 35);
